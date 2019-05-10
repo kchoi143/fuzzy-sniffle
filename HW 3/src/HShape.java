@@ -6,24 +6,26 @@ import java.util.Random;
 
 public class HShape extends AbstractShape {
 	
-//	public HShape(int x, int y, Color c, int size) {
-//		
-//	}
-	
+	int x, y, size;
+	Color c;
+	public HShape(int x, int y, Color c, int size) {
+		this.x = x;
+		this.y = y;
+		this.c = c;
+		this.size = size;
+	}
+
 	@Override
 	public void draw(Graphics g) {
-		// print Fibonacci at a random location
-		// CHANGE THIS
-		Random rand = new Random();
-		// font size
-		int fsize = rand.nextInt(50) + 20;
-		Font font = new Font("Courier", Font.BOLD, fsize);
-		g.setFont(font);
-		// random color for the font
-		g.setColor(new Color(rand.nextInt()));
-		// random location
-		int x = rand.nextInt(1000);
-		int y = rand.nextInt(800);
-		g.drawString("H!", x, y);
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if ((i == 1 & j == 0) || i == 1 & j == 2) {
+				} else {
+					g.setColor(c);
+					g.drawRect(x+(i*(size/3)), y+(j*(size/3)), size/3, size/3);
+					g.fillRect(x+(i*(size/3)), y+(j*(size/3)), size/3, size/3);	
+				}
+			}
+		}
 	}
 }

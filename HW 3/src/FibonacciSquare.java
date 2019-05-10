@@ -58,4 +58,8 @@ public class FibonacciSquare extends AbstractShape {
 			
 		}
 	}
+	
+//	public Shape deepCopy() {
+//		
+//	}
 }

@@ -29,6 +29,8 @@ public class MainClass {
 		model.addShape(s2);
 		model.addShape(s3);
 		model.addShape(s4);
+		Shape s5 = new HShape(200, 200, Color.GREEN, 200);
+		model.addShape(s5);
 		model.addView(panel);
 	}
 }
