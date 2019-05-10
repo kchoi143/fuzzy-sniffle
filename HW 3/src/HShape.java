@@ -6,8 +6,7 @@ import java.util.Random;
 
 public class HShape extends AbstractShape {
 	
-	int x, y, size;
-	Color c;
+	int size;
 	public HShape(int x, int y, Color c, int size) {
 		this.x = x;
 		this.y = y;
@@ -27,5 +26,13 @@ public class HShape extends AbstractShape {
 				}
 			}
 		}
+	}
+	
+	public Shape deepCopy() {
+		int x = this.x;
+		int y = this.y;
+		Color c = this.c;
+		int size = this.size;
+		return new HShape(x, y, c, size);
 	}
 }

@@ -30,7 +30,8 @@ public class Viewer extends JPanel implements View {
 			}
 		}
 	}
-
+	
+	
 }
 
 

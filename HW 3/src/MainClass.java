@@ -22,15 +22,17 @@ public class MainClass {
 
 		DrawingModel model = new DrawingModel();
 		Shape s1 = new FibonacciSquare(50, 50, Color.RED, 1, 12);
-		Shape s2 = new FibonacciSquare(250, 50, Color.RED, 2, 12);
-		Shape s3 = new FibonacciSquare(450, 50, Color.RED, 3, 12);
-		Shape s4 = new FibonacciSquare(650, 50, Color.RED, 4, 12);
+		Shape s2 = new FibonacciSquare(250, 50, Color.RED, 2, 11);
+		Shape s3 = new FibonacciSquare(450, 50, Color.RED, 3, 10);
+		Shape s4 = new FibonacciSquare(650, 50, Color.RED, 4, 9);
 		model.addShape(s1);
 		model.addShape(s2);
 		model.addShape(s3);
 		model.addShape(s4);
 		Shape s5 = new HShape(200, 200, Color.GREEN, 200);
+		Shape s6 = new HShape(500, 300, Color.BLUE, 100);
 		model.addShape(s5);
+		model.addShape(s6);
 		model.addView(panel);
 	}
 }

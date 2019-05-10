@@ -9,8 +9,7 @@ import java.awt.Graphics;
 
 public class FibonacciSquare extends AbstractShape {
 
-	int x, y, quadrant, n;
-	Color c;
+	int quadrant, n;
 	/**
 	 * 
 	 * @param x, y (x, y) coordinates of upper-left corner of shape
@@ -59,7 +58,12 @@ public class FibonacciSquare extends AbstractShape {
 		}
 	}
 	
-//	public Shape deepCopy() {
-//		
-//	}
+	public Shape deepCopy() {
+		int x = this.x;
+		int y = this.y;
+		Color c = this.c;
+		int quadrant = this.quadrant;
+		int n = this.n;
+		return new FibonacciSquare(x, y, c, quadrant, n);
+	}
 }
